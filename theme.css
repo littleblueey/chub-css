@@ -227,33 +227,34 @@ div.msg-mkdn-container + div > button.ant-btn:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-button.ant-btn:has(.anticon-star) {
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  z-index: 1000 !important;
-  background: linear-gradient(135deg, #1a0f3d, #2d1b4e) !important;
-  border: 2px solid rgba(74, 124, 158, 0.7) !important;
-  border-radius: 50% !important;
-  width: 50px !important;
-  height: 50px !important;
-  font-size: 24px !important;
-  color: #87CEEB !important;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
+.ant-space.ant-space-horizontal.ant-space-align-center {
+  position: relative !important;
+  padding-top: 60px !important; 
 }
 
-button.ant-btn:has(.anticon-star):hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 30px rgba(74, 124, 158, 0.5);
+button.ant-btn:has(.anticon-star):not(:has(svg path[d*="M664.8"])) {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  z-index: 10 !important;
+  
+  background: #1a0f3d !important;
+  border: 2px solid rgba(74, 124, 158, 0.7) !important;
+  border-radius: 8px !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 8px 12px !important;
+  font-size: 20px !important;
+  color: #87CEEB !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 2px 2px 0px #0a0a0a !important;
+}
+
+button.ant-btn:has(.anticon-star):not(:has(svg path[d*="M664.8"])):hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px #0a0a0a !important;
 }
 
 button.ant-btn:has(.anticon-star svg path[d*="M664.8"]) {
-  color: #FFD700 !important;
-  border-color: #FFD700 !important;
-}
-
-.ant-space.ant-space-horizontal.ant-space-align-center {
-  position: relative;
-  padding-top: 0px;
+  display: none !important;
 }
