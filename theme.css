@@ -9,7 +9,7 @@
   text-shadow: 
     0 0 20px rgba(74, 124, 158, 0.8),
     0 0 40px rgba(135, 206, 235, 0.5),
-    0 4px 8px rgba(0, 0, 0, 0.8) !important;
+    0 4px 8px rgba(0, 0, 0, 0.8);
   animation: name-glow 3s ease-in-out infinite !important;
 }
 
