@@ -1,21 +1,9 @@
-.ant-col.text-left {
-  position: relative !important;
+h1.ant-typography[class*="css-"] {
+  display: none !important;
 }
 
-h1.ant-typography[class*="css-"] {
-  position: absolute !important;
-  bottom: 25px !important;
-  left: 25px !important;
-  z-index: 10 !important;
-  font-family: 'Georgia', serif !important;
-  font-size: clamp(60px, 8vw, 80px) !important;
-  line-height: 1 !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
-  margin: 0 !important;
+.ant-col.text-left {
+  position: relative !important;
 }
 
 .ant-col.text-left .ant-image {
@@ -24,8 +12,8 @@ h1.ant-typography[class*="css-"] {
   max-width: 100%;
   border-radius: 15px;
   overflow: hidden;
-  border: 2px solid rgba(74, 124, 158, 0.6);
-  box-shadow: 0 5px 30px rgba(74, 124, 158, 0.4);
+  border: 2px solid rgba(52, 224, 161, 0.2);
+  box-shadow: 0 5px 30px rgba(52, 224, 161, 0.1);
   position: relative;
   margin: 0 auto;
 }
@@ -43,7 +31,7 @@ h1.ant-typography[class*="css-"] {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(15, 20, 25, 0) 60%, rgba(26, 15, 61, 0.6) 100%);
+  background: linear-gradient(180deg, rgba(10, 15, 20, 0) 60%, rgba(10, 15, 20, 0.8) 100%);
   pointer-events: none;
   border-radius: 15px;
 }
@@ -61,8 +49,8 @@ button.ant-btn-default,
 .ant-btn-default,
 button.ant-btn:not(.ant-btn-primary):not([class*="primary"]) {
   background: transparent !important;
-  color: #4a7c9e !important;
-  border: 1px solid rgba(74, 124, 158, 0.5) !important;
+  color: #34e0a1 !important;
+  border: 1px solid rgba(52, 224, 161, 0.3) !important;
   box-shadow: none !important;
 }
 
@@ -70,31 +58,31 @@ button.ant-btn.ant-btn-default:hover,
 button.ant-btn-default:hover,
 .ant-btn-default:hover,
 button.ant-btn:not(.ant-btn-primary):not([class*="primary"]):hover {
-  background: rgba(74, 124, 158, 0.1) !important;
-  border-color: #87CEEB !important;
-  color: #87CEEB !important;
+  background: rgba(52, 224, 161, 0.1) !important;
+  border-color: #34e0a1 !important;
+  color: #34e0a1 !important;
   transform: translateY(-1px) !important;
 }
 
 button.ant-btn:has(svg.lucide-messages-square) {
   font-size: 15px !important;
-  color: #fff !important;
+  color: #ffffff !important;
   font-weight: 800 !important;
   height: 64px !important;
   padding: 0 1.8em !important;
   border-radius: 10px !important;
-  background: #1a0f3d !important;
-  border: 2px solid #4a7c9e !important;
-  box-shadow: 0 0 15px rgba(74, 124, 158, 0.5), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
+  background: #ff1111 !important;
+  border: 2px solid rgba(255, 17, 17, 0.5) !important;
+  box-shadow: 0 0 15px rgba(255, 17, 17, 0.4), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
   position: relative !important;
   overflow: hidden !important;
 }
 
 button.ant-btn:has(svg.lucide-messages-square):hover {
-  background: #2d1b4e !important;
-  border-color: #87CEEB !important;
-  box-shadow: 0 0 25px rgba(74, 124, 158, 0.8), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
+  background: #ff3333 !important;
+  border-color: #ff1111 !important;
+  box-shadow: 0 0 25px rgba(255, 17, 17, 0.7), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
   transform: translateY(-2px) !important;
   filter: brightness(1.2) !important;
 }
@@ -109,21 +97,21 @@ button.ant-btn:has(.anticon-star):not(:has(svg path[d*="M664.8"])) {
   top: 10px !important;
   right: 10px !important;
   z-index: 10 !important;
-  background: #1a0f3d !important;
-  border: 2px solid rgba(74, 124, 158, 0.7) !important;
+  background: #11181f !important;
+  border: 2px solid rgba(52, 224, 161, 0.3) !important;
   border-radius: 8px !important;
   width: auto !important;
   height: auto !important;
   padding: 8px 12px !important;
   font-size: 20px !important;
-  color: #87CEEB !important;
+  color: #34e0a1 !important;
   transition: all 0.2s ease !important;
-  box-shadow: 2px 2px 0px #0a0a0a !important;
+  box-shadow: 2px 2px 0px #0a0f14 !important;
 }
 
 button.ant-btn:has(.anticon-star):not(:has(svg path[d*="M664.8"])):hover {
     transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 0px #0a0a0a !important;
+    box-shadow: 4px 4px 0px #0a0f14 !important;
 }
 
 button.ant-btn:has(.anticon-star svg path[d*="M664.8"]) {
