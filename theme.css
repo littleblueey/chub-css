@@ -1,3 +1,7 @@
+h1.ant-typography[class*="css-"] {
+  display: none !important;
+}
+
 .ant-col.text-left {
   position: relative !important;
 }
@@ -16,6 +20,18 @@
   letter-spacing: 2px !important;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
   margin: 0 !important;
+}
+
+div[class*="chub-character-card"] .ant-col.text-left {
+  position: relative !important;
+}
+
+.ant-image-mask {
+  transition: opacity 0.3s ease-in-out !important;
+}
+
+.ant-col.text-left .ant-image:hover .ant-image-mask {
+  opacity: 0 !important;
 }
 
 @keyframes name-glow {
