@@ -14,33 +14,6 @@
   margin: 0 !important;
 }
 
-div[class*="chub-character-card"] .ant-col.text-left {
-  position: relative !important;
-}
-
-.ant-image-mask {
-  transition: opacity 0.3s ease-in-out !important;
-}
-
-.ant-col.text-left .ant-image:hover .ant-image-mask {
-  opacity: 0 !important;
-}
-
-@keyframes name-glow {
-  0%, 100% {
-    text-shadow: 
-      0 0 20px rgba(74, 124, 158, 0.8),
-      0 0 40px rgba(135, 206, 235, 0.5),
-      0 4px 8px rgba(0, 0, 0, 0.8);
-  }
-  50% {
-    text-shadow: 
-      0 0 30px rgba(74, 124, 158, 1),
-      0 0 60px rgba(135, 206, 235, 0.8),
-      0 4px 8px rgba(0, 0, 0, 0.8);
-  }
-}
-
 button.ant-btn {
   position: relative !important;
   align-items: center !important;
@@ -166,18 +139,6 @@ button.ant-btn:has(svg.lucide-messages-square):active {
   transform: scale(.97) !important;
 }
 
-@keyframes button-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(74, 124, 158, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 12px rgba(74, 124, 158, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(74, 124, 158, 0);
-  }
-}
-
 button.ant-btn:has(svg.lucide-messages-square)::after {
   content: "" !important;
   position: absolute !important;
@@ -190,6 +151,22 @@ button.ant-btn:has(svg.lucide-messages-square)::after {
   display: block !important;
 }
 
+@keyframes button-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 124, 158, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(74, 124, 158, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 124, 158, 0);
+  }
+}
+
+.ant-col.text-left {
+  position: relative !important;
+}
+
 .ant-col.text-left .ant-image {
   width: 350px !important;
   height: 350px !important;
@@ -198,7 +175,6 @@ button.ant-btn:has(svg.lucide-messages-square)::after {
   overflow: hidden;
   border: 2px solid rgba(74, 124, 158, 0.6);
   box-shadow: 0 5px 30px rgba(74, 124, 158, 0.4);
-  position: relative;
   margin: 0 auto;
 }
 
@@ -218,6 +194,14 @@ button.ant-btn:has(svg.lucide-messages-square)::after {
   background: linear-gradient(180deg, rgba(15, 20, 25, 0) 60%, rgba(26, 15, 61, 0.6) 100%);
   pointer-events: none;
   border-radius: 15px;
+}
+
+.ant-image-mask {
+  transition: opacity 0.3s ease-in-out !important;
+}
+
+.ant-col.text-left .ant-image:hover .ant-image-mask {
+  opacity: 0 !important;
 }
 
 div.msg-mkdn-container + div > button.ant-btn {
