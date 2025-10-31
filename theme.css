@@ -2,69 +2,8 @@ h1.ant-typography[class*="css-"] {
   display: none !important;
 }
 
-div[class*="chub-character-card"] .ant-btn-primary[class*="css-"] {
-  background: #1a0f3d !important;
-  color: #fff !important;
-  border: 2px solid #4a7c9e !important;
-  box-shadow: 0 0 15px rgba(74, 124, 158, 0.5), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
-}
-
-div[class*="chub-character-card"] .ant-btn-primary[class*="css-"]:hover {
-  background: #2d1b4e !important;
-  border-color: #87CEEB !important;
-  box-shadow: 0 0 25px rgba(74, 124, 158, 0.8), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
-  transform: translateY(-1px) !important;
-}
-
 .ant-col.text-left {
   position: relative !important;
-}
-
-.ant-image-mask {
-  transition: opacity 0.3s ease-in-out !important;
-}
-
-.ant-col.text-left .ant-image:hover .ant-image-mask {
-  opacity: 0 !important;
-}
-
-@keyframes name-glow {
-  0%, 100% {
-    text-shadow: 
-      0 0 20px rgba(74, 124, 158, 0.8),
-      0 0 40px rgba(135, 206, 235, 0.5),
-      0 4px 8px rgba(0, 0, 0, 0.8);
-  }
-  50% {
-    text-shadow: 
-      0 0 30px rgba(74, 124, 158, 1),
-      0 0 60px rgba(135, 206, 235, 0.8),
-      0 4px 8px rgba(0, 0, 0, 0.8);
-  }
-}
-
-button.ant-btn {
-  position: relative !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: .5em !important;
-  white-space: nowrap !important;
-  font-weight: 700 !important;
-  font-family: 'Space Mono', monospace !important;
-  font-size: 14px !important;
-  height: 48px !important;
-  min-width: 64px !important;
-  padding: .5em 1.4em !important;
-  border-radius: 8px !important;
-  transition: transform .15s, box-shadow .15s, background-color .25s, color .25s, border-color .25s !important;
-  cursor: pointer !important;
-  overflow: visible !important;
-  isolation: isolate !important;
-}
-
-button.ant-btn:active {
-  transform: translateY(1px) !important;
 }
 
 button.ant-btn.ant-btn-default,
@@ -87,10 +26,6 @@ button.ant-btn:not(.ant-btn-primary):not([class*="primary"]):hover {
   transform: translateY(-1px) !important;
 }
 
-button.ant-btn:hover {
-  box-shadow: none !important;
-}
-
 button.ant-btn:has(svg.lucide-messages-square) {
   font-size: 15px !important;
   color: #fff !important;
@@ -98,120 +33,20 @@ button.ant-btn:has(svg.lucide-messages-square) {
   height: 64px !important;
   padding: 0 1.8em !important;
   border-radius: 10px !important;
-  background: linear-gradient(135deg, #2d1b4e 0%, #4a7c9e 50%, #2d1b4e 100%) !important;
-  border: 3px solid #87CEEB !important;
-  box-shadow: 
-    0 2px 0 #1a0f3d,
-    0 0 20px rgba(74, 124, 158, 0.7),
-    0 6px 16px rgba(0, 0, 0, 0.7),
-    inset 0 2px 0 rgba(135, 206, 235, 0.3) !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+  background: #1a0f3d !important;
+  border: 2px solid #4a7c9e !important;
+  box-shadow: 0 0 15px rgba(74, 124, 158, 0.5), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
   position: relative !important;
   overflow: hidden !important;
 }
 
-button.ant-btn:has(svg.lucide-messages-square)::before {
-  content: '' !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: -100% !important;
-  width: 100% !important;
-  height: 100% !important;
-  background: linear-gradient(90deg, transparent, rgba(135, 206, 235, 0.3), transparent) !important;
-  transition: left 0.5s !important;
-}
-
 button.ant-btn:has(svg.lucide-messages-square):hover {
-  background: linear-gradient(135deg, #3d2b5e 0%, #5a8cae 50%, #3d2b5e 100%) !important;
-  border-color: #a0d8f0 !important;
-  box-shadow: 
-    0 2px 0 #2d1b4e,
-    0 0 30px rgba(74, 124, 158, 0.9),
-    0 8px 20px rgba(0, 0, 0, 0.8),
-    inset 0 2px 0 rgba(135, 206, 235, 0.4) !important;
+  background: #2d1b4e !important;
+  border-color: #87CEEB !important;
+  box-shadow: 0 0 25px rgba(74, 124, 158, 0.8), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
   transform: translateY(-2px) !important;
   filter: brightness(1.2) !important;
-}
-
-button.ant-btn:has(svg.lucide-messages-square):hover::before {
-  left: 100% !important;
-}
-
-button.ant-btn:has(svg.lucide-messages-square):active {
-  transform: scale(.97) !important;
-}
-
-@keyframes button-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(74, 124, 158, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 12px rgba(74, 124, 158, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(74, 124, 158, 0);
-  }
-}
-
-button.ant-btn:has(svg.lucide-messages-square)::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: -2px !important;
-  border-radius: inherit !important;
-  box-shadow: 0 0 0 0 rgba(74, 124, 158, 0.7) !important;
-  animation: button-pulse 2.8s ease-out infinite !important;
-  pointer-events: none !important;
-  z-index: -1 !important;
-  display: block !important;
-}
-
-.ant-col.text-left .ant-image {
-  width: 350px !important;
-  height: 350px !important;
-  max-width: 100%;
-  border-radius: 15px;
-  overflow: hidden;
-  border: 2px solid rgba(74, 124, 158, 0.6);
-  box-shadow: 0 5px 30px rgba(74, 124, 158, 0.4);
-  position: relative;
-  margin: 0 auto;
-}
-
-.ant-col.text-left .ant-image .ant-image-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.ant-col.text-left .ant-image::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(15, 20, 25, 0) 60%, rgba(26, 15, 61, 0.6) 100%);
-  pointer-events: none;
-  border-radius: 15px;
-}
-
-div.msg-mkdn-container + div > button.ant-btn {
-  background: linear-gradient(135deg, rgba(45, 27, 78, 0.3), rgba(74, 124, 158, 0.15)) !important;
-  border: 1px solid rgba(74, 124, 158, 0.5) !important;
-  color: #87CEEB !important;
-  border-radius: 8px !important;
-  padding: 8px 16px !important;
-  font-weight: 600 !important;
-  letter-spacing: 1px !important;
-  text-transform: uppercase !important;
-  transition: all 0.3s ease !important;
-}
-
-div.msg-mkdn-container + div > button.ant-btn:hover {
-  background: linear-gradient(135deg, rgba(45, 27, 78, 0.5), rgba(74, 124, 158, 0.3)) !important;
-  color: #ffffff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .ant-space.ant-space-horizontal.ant-space-align-center {
