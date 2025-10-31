@@ -10,7 +10,7 @@
     0 0 20px rgba(74, 124, 158, 0.8),
     0 0 40px rgba(135, 206, 235, 0.5),
     0 4px 8px rgba(0, 0, 0, 0.8) !important;
-  animation: name-glow 3s ease-in-out infinite;
+  animation: name-glow 3s ease-in-out infinite !important;
 }
 
 @keyframes name-glow {
@@ -29,11 +29,11 @@
 }
 
 button.ant-btn {
-  position: relative;
+  position: relative !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: .5em;
-  white-space: nowrap;
+  gap: .5em !important;
+  white-space: nowrap !important;
   font-weight: 700 !important;
   font-family: 'Space Mono', monospace !important;
   font-size: 14px !important;
@@ -41,14 +41,14 @@ button.ant-btn {
   min-width: 64px !important;
   padding: .5em 1.4em !important;
   border-radius: 8px !important;
-  transition: transform .15s, box-shadow .15s, background-color .25s, color .25s, border-color .25s;
-  cursor: pointer;
+  transition: transform .15s, box-shadow .15s, background-color .25s, color .25s, border-color .25s !important;
+  cursor: pointer !important;
   overflow: visible !important;
-  isolation: isolate;
+  isolation: isolate !important;
 }
 
 button.ant-btn:active {
-  transform: translateY(1px);
+  transform: translateY(1px) !important;
 }
 
 button.ant-btn.ant-btn-default,
@@ -127,14 +127,14 @@ button.ant-btn:has(svg.lucide-messages-square) {
 }
 
 button.ant-btn:has(svg.lucide-messages-square)::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(135, 206, 235, 0.3), transparent);
-  transition: left 0.5s;
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(135, 206, 235, 0.3), transparent) !important;
+  transition: left 0.5s !important;
 }
 
 button.ant-btn:has(svg.lucide-messages-square):hover {
@@ -150,11 +150,11 @@ button.ant-btn:has(svg.lucide-messages-square):hover {
 }
 
 button.ant-btn:has(svg.lucide-messages-square):hover::before {
-  left: 100%;
+  left: 100% !important;
 }
 
 button.ant-btn:has(svg.lucide-messages-square):active {
-  transform: scale(.97);
+  transform: scale(.97) !important;
 }
 
 @keyframes button-pulse {
@@ -170,13 +170,13 @@ button.ant-btn:has(svg.lucide-messages-square):active {
 }
 
 button.ant-btn:has(svg.lucide-messages-square)::after {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  box-shadow: 0 0 0 0 rgba(74, 124, 158, 0.7);
+  content: "" !important;
+  position: absolute !important;
+  inset: -2px !important;
+  border-radius: inherit !important;
+  box-shadow: 0 0 0 0 rgba(74, 124, 158, 0.7) !important;
   animation: button-pulse 2.8s ease-out infinite !important;
-  pointer-events: none;
-  z-index: -1;
+  pointer-events: none !important;
+  z-index: -1 !important;
   display: block !important;
 }
