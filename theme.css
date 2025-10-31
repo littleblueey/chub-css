@@ -71,18 +71,19 @@ button.ant-btn:has(svg.lucide-messages-square) {
   height: 64px !important;
   padding: 0 1.8em !important;
   border-radius: 10px !important;
-  background: #ff1111 !important;
-  border: 2px solid rgba(255, 17, 17, 0.5) !important;
-  box-shadow: 0 0 15px rgba(255, 17, 17, 0.4), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
+  background: #9e2b25 !important;
+  border: 2px solid rgba(158, 43, 37, 0.5) !important;
+  outline: 1px solid #000000 !important;
+  box-shadow: 0 0 15px rgba(158, 43, 37, 0.4), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
   position: relative !important;
   overflow: hidden !important;
 }
 
 button.ant-btn:has(svg.lucide-messages-square):hover {
-  background: #ff3333 !important;
-  border-color: #ff1111 !important;
-  box-shadow: 0 0 25px rgba(255, 17, 17, 0.7), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
+  background: #b03a32 !important;
+  border-color: #9e2b25 !important;
+  box-shadow: 0 0 25px rgba(158, 43, 37, 0.7), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
   transform: translateY(-2px) !important;
   filter: brightness(1.2) !important;
 }
