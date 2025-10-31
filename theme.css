@@ -2,27 +2,22 @@ h1.ant-typography[class*="css-"] {
   display: none !important;
 }
 
+div[class*="chub-character-card"] .ant-btn-primary[class*="css-"] {
+  background: #1a0f3d !important;
+  color: #fff !important;
+  border: 2px solid #4a7c9e !important;
+  box-shadow: 0 0 15px rgba(74, 124, 158, 0.5), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+div[class*="chub-character-card"] .ant-btn-primary[class*="css-"]:hover {
+  background: #2d1b4e !important;
+  border-color: #87CEEB !important;
+  box-shadow: 0 0 25px rgba(74, 124, 158, 0.8), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
+  transform: translateY(-1px) !important;
+}
+
 .ant-col.text-left {
-  position: relative !important;
-}
-
-:is(h1, h2, h3).ant-typography[class*=css-] {
-  position: absolute !important;
-  bottom: 25px !important;
-  left: 25px !important;
-  z-index: 10 !important;
-  font-family: 'Georgia', serif !important;
-  font-size: clamp(60px, 8vw, 80px) !important;
-  line-height: 1 !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
-  margin: 0 !important;
-}
-
-div[class*="chub-character-card"] .ant-col.text-left {
   position: relative !important;
 }
 
@@ -89,21 +84,6 @@ button.ant-btn:not(.ant-btn-primary):not([class*="primary"]):hover {
   background: rgba(74, 124, 158, 0.1) !important;
   border-color: #87CEEB !important;
   color: #87CEEB !important;
-  transform: translateY(-1px) !important;
-}
-
-.ant-btn-primary[class*="css-"] {
-  background: #1a0f3d !important;
-  color: #fff !important;
-  border: 2px solid #4a7c9e !important;
-  box-shadow: 0 0 15px rgba(74, 124, 158, 0.5), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
-}
-
-.ant-btn-primary[class*="css-"]:hover {
-  background: #2d1b4e !important;
-  border-color: #87CEEB !important;
-  box-shadow: 0 0 25px rgba(74, 124, 158, 0.8), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
   transform: translateY(-1px) !important;
 }
 
