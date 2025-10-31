@@ -1,17 +1,29 @@
 :is(h1, h2, h3).ant-typography[class*=css-] {
-  font-size: clamp(36px, 5vw, 48px) !important;
-  line-height: 1.15 !important;
+  position: absolute !important;
+  bottom: 25px !important;
+  left: 25px !important;
+  z-index: 10 !important;
+  font-family: 'Georgia', serif !important;
+  font-size: clamp(60px, 8vw, 80px) !important;
+  line-height: 1 !important;
   font-weight: 700 !important;
-  color: #87CEEB !important;
-  margin: 0 0 12px !important;
-  letter-spacing: 3px !important;
+  color: #ffffff !important;
   text-transform: uppercase !important;
-  text-shadow: 
-    0 0 10px rgba(74, 124, 158, 0.7),
-    0 0 25px rgba(135, 206, 235, 0.5),
-    0 2px 4px rgba(0, 0, 0, 0.5);
-  animation: name-glow 3s ease-in-out infinite !important;
-  font-family: 'Georgia', serif;
+  letter-spacing: 2px !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
+  margin: 0 !important;
+}
+
+div[class*="chub-character-card"] .ant-col.text-left {
+  position: relative !important;
+}
+
+.ant-image-mask {
+  transition: opacity 0.3s ease-in-out !important;
+}
+
+.ant-col.text-left .ant-image:hover .ant-image-mask {
+  opacity: 0 !important;
 }
 
 @keyframes name-glow {
@@ -237,7 +249,6 @@ button.ant-btn:has(.anticon-star):not(:has(svg path[d*="M664.8"])) {
   top: 10px !important;
   right: 10px !important;
   z-index: 10 !important;
-  
   background: #1a0f3d !important;
   border: 2px solid rgba(74, 124, 158, 0.7) !important;
   border-radius: 8px !important;
