@@ -1,3 +1,7 @@
+.ant-col.text-left {
+  position: relative !important;
+}
+
 :is(h1, h2, h3).ant-typography[class*=css-] {
   position: absolute !important;
   bottom: 25px !important;
@@ -12,18 +16,6 @@
   letter-spacing: 2px !important;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
   margin: 0 !important;
-}
-
-div[class*="chub-character-card"] .ant-col.text-left {
-  position: relative !important;
-}
-
-.ant-image-mask {
-  transition: opacity 0.3s ease-in-out !important;
-}
-
-.ant-col.text-left .ant-image:hover .ant-image-mask {
-  opacity: 0 !important;
 }
 
 @keyframes name-glow {
@@ -68,48 +60,35 @@ button.ant-btn.ant-btn-default,
 button.ant-btn-default,
 .ant-btn-default,
 button.ant-btn:not(.ant-btn-primary):not([class*="primary"]) {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
-  color: #87CEEB !important;
-  border: 2px solid rgba(74, 124, 158, 0.5) !important;
-  box-shadow: 
-    0 2px 8px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(135, 206, 235, 0.1) !important;
+  background: transparent !important;
+  color: #4a7c9e !important;
+  border: 1px solid rgba(74, 124, 158, 0.5) !important;
+  box-shadow: none !important;
 }
 
 button.ant-btn.ant-btn-default:hover,
 button.ant-btn-default:hover,
 .ant-btn-default:hover,
 button.ant-btn:not(.ant-btn-primary):not([class*="primary"]):hover {
-  background: linear-gradient(135deg, #2d1b4e 0%, #3a2660 100%) !important;
-  border-color: #4a7c9e !important;
-  color: #fff !important;
-  box-shadow: 
-    0 0 15px rgba(74, 124, 158, 0.5),
-    0 4px 12px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(135, 206, 235, 0.2) !important;
+  background: rgba(74, 124, 158, 0.1) !important;
+  border-color: #87CEEB !important;
+  color: #87CEEB !important;
   transform: translateY(-1px) !important;
 }
 
 .ant-btn-primary[class*="css-"] {
-  background: linear-gradient(135deg, #2d1b4e 0%, #4a7c9e 50%, #2d1b4e 100%) !important;
+  background: #1a0f3d !important;
   color: #fff !important;
-  border: 2px solid #87CEEB !important;
-  box-shadow: 
-    0 0 15px rgba(74, 124, 158, 0.5),
-    0 4px 12px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(135, 206, 235, 0.2) !important;
+  border: 2px solid #4a7c9e !important;
+  box-shadow: 0 0 15px rgba(74, 124, 158, 0.5), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
 }
 
 .ant-btn-primary[class*="css-"]:hover {
-  background: linear-gradient(135deg, #3d2b5e 0%, #5a8cae 50%, #3d2b5e 100%) !important;
-  border-color: #a0d8f0 !important;
-  box-shadow: 
-    0 0 25px rgba(74, 124, 158, 0.7),
-    0 6px 16px rgba(0, 0, 0, 0.7),
-    inset 0 1px 0 rgba(135, 206, 235, 0.3) !important;
+  background: #2d1b4e !important;
+  border-color: #87CEEB !important;
+  box-shadow: 0 0 25px rgba(74, 124, 158, 0.8), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
   transform: translateY(-1px) !important;
-  filter: brightness(1.1) !important;
 }
 
 button.ant-btn:hover {
