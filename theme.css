@@ -1,39 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-h3.ant-typography{
+/* Hide default Chub elements */
+h3.ant-typography {
   display: none !important;
 }
 
+/* VT323 font class */
 .vt323-regular {
   font-family: "VT323", monospace;
   font-weight: 400;
   font-style: normal;
 }
 
-.ant-col.text-left {
-  position: relative !important;
-}
-
+/* Chub character image styling */
 .ant-col.text-left > .ant-ribbon-wrapper > .ant-image {
   width: 350px !important;
   height: 350px !important;
-  border-radius: 15px !important;
-  border: 2px solid rgba(52, 224, 161, 0.2) !important;
-  box-shadow: 0 5px 30px rgba(52, 224, 161, 0.1) !important;
+  border-radius: 0 !important;
+  border: 4px solid rgba(52, 224, 161, 0.4) !important;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5), 0 0 20px rgba(52, 224, 161, 0.2) !important;
   max-width: 100%;
   overflow: hidden !important;
   position: relative !important;
   margin: 0 auto;
   display: block !important;
+  background: #000 !important;
 }
 
 .ant-col.text-left > .ant-ribbon-wrapper > .ant-image .ant-image-img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  border-radius: 15px !important;
+  filter: contrast(1.1) brightness(0.95) !important;
 }
 
+/* VHS scan effect on image */
 .ant-col.text-left > .ant-ribbon-wrapper > .ant-image::after {
   content: '';
   position: absolute;
@@ -41,14 +42,15 @@ h3.ant-typography{
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(10, 15, 20, 0) 60%, rgba(10, 15, 20, 0.8) 100%);
+  background: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
+    linear-gradient(180deg, rgba(10, 15, 20, 0) 60%, rgba(10, 15, 20, 0.8) 100%);
   pointer-events: none;
-  border-radius: 15px;
   z-index: 1;
 }
 
 .ant-col.text-left > .ant-ribbon-wrapper > .ant-image .ant-image-mask {
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
   opacity: 0 !important;
   transition: opacity 0.3s ease-in-out !important;
 }
@@ -57,50 +59,89 @@ h3.ant-typography{
   opacity: 1 !important;
 }
 
+/* Chat button styling - VHS Record button */
+button.ant-btn:has(svg.lucide-messages-square) {
+  font-family: "VT323", monospace !important;
+  font-size: 20px !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  height: 64px !important;
+  padding: 0 2em !important;
+  border-radius: 0 !important;
+  background: #9e2b25 !important;
+  border: 4px solid rgba(52, 224, 161, 0.3) !important;
+  outline: none !important;
+  box-shadow: 
+    6px 6px 0 rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(158, 43, 37, 0.5),
+    inset 0 0 20px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+button.ant-btn:has(svg.lucide-messages-square)::before {
+  content: '▶ ';
+  color: #34e0a1;
+  text-shadow: 0 0 10px #34e0a1;
+}
+
+button.ant-btn:has(svg.lucide-messages-square)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 224, 161, 0.3), transparent);
+  animation: vhs-scan-btn 3s infinite;
+}
+
+@keyframes vhs-scan-btn {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+button.ant-btn:has(svg.lucide-messages-square):hover {
+  background: #b03a32 !important;
+  border-color: #34e0a1 !important;
+  box-shadow: 
+    8px 8px 0 rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(52, 224, 161, 0.7),
+    inset 0 0 20px rgba(0, 0, 0, 0.3) !important;
+  transform: translate(-2px, -2px) !important;
+  filter: brightness(1.2) !important;
+}
+
+/* Other default buttons */
 button.ant-btn.ant-btn-default,
 button.ant-btn-default,
 .ant-btn-default,
 button.ant-btn:not(.ant-btn-primary):not([class*="primary"]) {
-  background: transparent !important;
+  background: rgba(17, 24, 31, 0.9) !important;
   color: #34e0a1 !important;
-  border: 1px solid rgba(52, 224, 161, 0.3) !important;
-  box-shadow: none !important;
+  border: 2px solid rgba(52, 224, 161, 0.4) !important;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5) !important;
+  font-family: "VT323", monospace !important;
+  font-size: 16px !important;
+  letter-spacing: 1px !important;
+  border-radius: 0 !important;
 }
 
 button.ant-btn.ant-btn-default:hover,
 button.ant-btn-default:hover,
 .ant-btn-default:hover,
 button.ant-btn:not(.ant-btn-primary):not([class*="primary"]):hover {
-  background: rgba(52, 224, 161, 0.1) !important;
+  background: rgba(52, 224, 161, 0.2) !important;
   border-color: #34e0a1 !important;
   color: #34e0a1 !important;
-  transform: translateY(-1px) !important;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5) !important;
+  transform: translate(-2px, -2px) !important;
 }
 
-button.ant-btn:has(svg.lucide-messages-square) {
-  font-size: 15px !important;
-  color: #ffffff !important;
-  font-weight: 800 !important;
-  height: 64px !important;
-  padding: 0 1.8em !important;
-  border-radius: 10px !important;
-  background: #9e2b25 !important;
-  border: 2px solid rgba(158, 43, 37, 0.5) !important;
-  outline: 1px solid #000000 !important;
-  box-shadow: 0 0 15px rgba(158, 43, 37, 0.4), 0 4px 12px rgba(0, 0, 0, 0.6) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-button.ant-btn:has(svg.lucide-messages-square):hover {
-  background: #b03a32 !important;
-  border-color: #9e2b25 !important;
-  box-shadow: 0 0 25px rgba(158, 43, 37, 0.7), 0 6px 16px rgba(0, 0, 0, 0.7) !important;
-  transform: translateY(-2px) !important;
-  filter: brightness(1.2) !important;
-}
-
+/* Favorite button positioning */
 .ant-space.ant-space-horizontal.ant-space-align-center {
   position: relative !important;
   padding-top: 60px !important; 
@@ -112,78 +153,67 @@ button.ant-btn:has(.anticon-star) {
   right: 5px !important;
   z-index: 10 !important;
   background: #11181f !important;
-  border: 2px solid rgba(52, 224, 161, 0.3) !important;
-  border-radius: 8px !important;
+  border: 3px solid rgba(52, 224, 161, 0.4) !important;
+  border-radius: 0 !important;
   width: auto !important;
   height: auto !important;
-  padding: 8px 12px !important;
-  font-size: 20px !important;
+  padding: 10px 14px !important;
+  font-size: 24px !important;
   color: #34e0a1 !important;
   transition: all 0.2s ease !important;
-  box-shadow: 2px 2px 0px #0a0f14 !important;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6) !important;
 }
 
 button.ant-btn:has(.anticon-star):hover {
   transform: translate(-2px, -2px) !important;
-  box-shadow: 4px 4px 0px #0a0f14 !important;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.6) !important;
+  background: rgba(52, 224, 161, 0.1) !important;
 }
 
-header .ant-menu-overflow-item a[href="/"] {
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px;
+/* Header modifications */
+.ant-layout-header {
+  background-color: rgba(20, 20, 30, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 2px solid rgba(52, 224, 161, 0.2) !important;
 }
 
+.ant-menu-dark, .ant-menu-dark.ant-menu-horizontal {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Logo replacement with VHS play symbol */
 header .ant-menu-overflow-item a[href="/"] > * {
   display: none !important;
 }
 
-header .ant-menu-overflow-item a[href="/"] {
-  position: relative;
-}
-
-header .ant-menu-overflow-item a[href="/"] {
-  position: relative;
+header .ant-menu-overflow-item a[href="/"]::before {
+  content: '▶';
+  font-family: "VT323", monospace;
+  font-size: 48px;
+  color: #9e2b25;
+  text-shadow: 0 0 10px #9e2b25, 2px 2px 0 #000;
+  animation: vhs-flicker 3s infinite steps(1);
   display: inline-block;
 }
 
-header .ant-menu-overflow-item a[href="/"] {
-  position: relative;
-}
-
-header .ant-menu-overflow-item a[href="/"]::before,
 header .ant-menu-overflow-item a[href="/"]::after {
-  content: '▸';
-  font-family: 'Courier New', Courier, monospace;
+  content: '▶';
+  font-family: "VT323", monospace;
   font-size: 48px;
-  line-height: 1.6;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-header .ant-menu-overflow-item a[href="/"]::before {
-  color: #9e2b25;
-  text-shadow: 0 0 5px #9e2b25;
-  animation: vhs-flicker 3s infinite steps(1);
-}
-
-header .ant-menu-overflow-item a[href="/"]::after {
   color: transparent;
-  text-shadow: -1px 0 #ff3b30, 1px 0 #3c00ff;
+  text-shadow: -2px 0 #ff3b30, 2px 0 #00ff88;
   animation: vhs-glitch 3s infinite steps(1);
 }
 
 @keyframes vhs-flicker {
-  0%, 100% {
-    opacity: 1;
-  }
-  50.2% {
-    opacity: 0.5;
-  }
-  50.6% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 1; }
+  50.2% { opacity: 0.5; }
+  50.6% { opacity: 1; }
 }
 
 @keyframes vhs-glitch {
@@ -214,13 +244,11 @@ header .ant-menu-overflow-item a[href="/"]::after {
 }
 
 header .ant-menu-overflow-item a[href="/"]:hover::before {
-  transform: scale(1.2) rotate(15deg);
+  transform: scale(1.2);
+  filter: brightness(1.3);
 }
 
-header.ant-layout-header .ant-menu-item[data-menu-id*="-home"] {
-  padding: 8px 15px !important;
-}
-
+/* Layout adjustments for custom content */
 .ant-col.text-left {
   position: relative !important;
 }
@@ -238,10 +266,10 @@ header.ant-layout-header .ant-menu-item[data-menu-id*="-home"] {
   flex-direction: column !important;
 }
 
-.ant-col.text-left > .mt-2 > div:has(h1.naomi-title) {
+.ant-col.text-left > .mt-2 > div:has(h1) {
   order: 1 !important;
-    margin-bottom: 80px !important;
-    margin-top: -70px !important;
+  margin-bottom: 80px !important;
+  margin-top: -70px !important;
 }
 
 .ant-col.text-left > .mt-2 > .sc-beySPh:first-child {
@@ -267,4 +295,22 @@ header.ant-layout-header .ant-menu-item[data-menu-id*="-home"] {
   position: relative !important;
   margin-top: 20px !important;
   z-index: 6 !important;
+}
+
+/* Global VHS effects */
+@keyframes tape-jitter {
+  0%, 100% { transform: translateX(0); }
+  10% { transform: translateX(-1px); }
+  20% { transform: translateX(1px); }
+  30% { transform: translateX(0); }
+}
+
+@keyframes record-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.3; }
+}
+
+@keyframes vhs-scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
 }
